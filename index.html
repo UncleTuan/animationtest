@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="/assets/img/stars.png" id="stars">
+        <img src="/assets/img/moon.png" id="moon">
+        <img src="/assets/img/mountains_behind.png" id="mountain_behind">
+        <h2 id="text">Hello</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="/assets/img/mountains_front.png" id="mountain_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ratione atque voluptates a alias dolore omnis! Veritatis quidem ipsum, consectetur ut architecto dolore pariatur voluptates. Hic dignissimos asperiores eius laudantium!
+            <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, ratione nesciunt natus nemo iste impedit error dolore accusamus. Odio impedit assumenda cumque, reprehenderit repellat itaque adipisci eligendi sit quaerat quo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, aspernatur? Alias nihil labore neque at illo eum, sed aliquam ducimus dolores non, iure doloribus, repellat quo! Ratione dolore dolores a!
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, quasi. Dicta nisi omnis tenetur sapiente impedit odit? Mollitia nemo accusamus ipsa doloremque nobis? Facere odio nisi, ipsum id ducimus veritatis?<br>
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ratione atque voluptates a alias dolore omnis! Veritatis quidem ipsum, consectetur ut architecto dolore pariatur voluptates. Hic dignissimos asperiores eius laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut nihil ex commodi! Illo aspernatur perferendis animi odio error tempore quam voluptatem repudiandae porro, non, commodi cumque dolorum soluta nemo?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil corporis cum quis. Aliquam nobis eos recusandae quia! Sequi blanditiis consequatur neque. Vitae placeat dolorum adipisci libero, nam sequi tempore similique.
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vero totam deleniti minus omnis, nesciunt modi minima, ea aspernatur repellat eum officiis at commodi mollitia rem laborum quo doloribus dolor. <br>
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ratione atque voluptates a alias dolore omnis! Veritatis quidem ipsum, consectetur ut architecto dolore pariatur voluptates. Hic dignissimos asperiores eius laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut nihil ex commodi! Illo aspernatur perferendis animi odio error tempore quam voluptatem repudiandae porro, non, commodi cumque dolorum soluta nemo?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil corporis cum quis. Aliquam nobis eos recusandae quia! Sequi blanditiis consequatur neque. Vitae placeat dolorum adipisci libero, nam sequi tempore similique.
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vero totam deleniti minus omnis, nesciunt modi minima, ea aspernatur repellat eum officiis at commodi mollitia rem laborum quo doloribus dolor. <br>
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ratione atque voluptates a alias dolore omnis! Veritatis quidem ipsum, consectetur ut architecto dolore pariatur voluptates. Hic dignissimos asperiores eius laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut nihil ex commodi! Illo aspernatur perferendis animi odio error tempore quam voluptatem repudiandae porro, non, commodi cumque dolorum soluta nemo?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil corporis cum quis. Aliquam nobis eos recusandae quia! Sequi blanditiis consequatur neque. Vitae placeat dolorum adipisci libero, nam sequi tempore similique.
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vero totam deleniti minus omnis, nesciunt modi minima, ea aspernatur repellat eum officiis at commodi mollitia rem laborum quo doloribus dolor. <br>
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ratione atque voluptates a alias dolore omnis! Veritatis quidem ipsum, consectetur ut architecto dolore pariatur voluptates. Hic dignissimos asperiores eius laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut nihil ex commodi! Illo aspernatur perferendis animi odio error tempore quam voluptatem repudiandae porro, non, commodi cumque dolorum soluta nemo?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil corporis cum quis. Aliquam nobis eos recusandae quia! Sequi blanditiis consequatur neque. Vitae placeat dolorum adipisci libero, nam sequi tempore similique.
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vero totam deleniti minus omnis, nesciunt modi minima, ea aspernatur repellat eum officiis at commodi mollitia rem laborum quo doloribus dolor. <br>
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountain_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountain_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + "px";
+            moon.style.top = value * 1.05 + "px";
+            mountains_behind.style.top = value * 0.5 + "px";
+            mountains_front.style.top = value * 0 + "px";
+            text.style.marginRight = value * 4 + "px";
+            text.style.marginTop = value * 1.5 + "px";
+            btn.style.marginTop = value * 1.5 + "px";
+            header.style.top = value * 0.5 + "px";
+        })
+    </script>
+</body>
+</html>
